@@ -3,6 +3,7 @@
 
 #include <QMainWindow>
 #include "vector.h"
+#include "qcustomplot.h"
 
 namespace Ui
 {
@@ -39,6 +40,8 @@ private:
     Vector<3> u_minus, u_plus;
 
     bool plotted;
+    QCPCurve *trajectory_minus;
+    QCPCurve *trajectory_plus;
 };
 
 #endif // MAINWINDOW_H

@@ -2,6 +2,7 @@
 #define DOPRI8_H_SYMMETRICAL
 
 #include "constants.h"
+#include "vector.h"
 
 static const double EPS = 1e-9;
 

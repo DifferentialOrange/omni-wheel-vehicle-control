@@ -94,14 +94,9 @@ void MainWindow::on_pushButton_compute_clicked()
 
     DOPRI8<6, 3> (0, T, initial_values, u_minus, u_plus, t_sw, t, nu_1, nu_2, nu_3, x, y, theta);
 
-    QCPCurve *trajectory_minus;
-    QCPCurve *trajectory_plus;
-
     if (plotted)
     {
         ui->PlotWidget_trajectory->clearPlottables();
-        delete trajectory_minus;
-        delete trajectory_plus;
     }
 
     Vector<3> W_minus = W_control(u_minus);
